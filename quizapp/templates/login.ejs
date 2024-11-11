@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('https://as2.ftcdn.net/v2/jpg/03/45/88/07/1000_F_345880772_zIT2mkdCzTthplO7xqaGGrMspN0jw0ll.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .form-container {
+            text-align: center;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 205, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            background-color: rgba(255, 255, 255, 0.7); /* Slight background to improve text visibility */
+        }
+        h2 {
+            color: #1e0909;
+        }
+        form {
+            text-align: center; /* Align form content to the center */
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        input[type="submit"] {
+            width: 100px;
+            display: inline-block;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #048138;
+            color: #e4e7ea;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        a {
+            color: #048138;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Optional: Media query for better responsiveness */
+        @media (max-width: 480px) {
+            .form-container {
+                width: 90%;
+            }
+            input[type="submit"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Log in</h2>
+        <form action="/home" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="signup" id="show-signup">Sign Up</a></p>
+    </div>
+</body>
+</html>
